@@ -1,21 +1,23 @@
-import java.util.*;
-// part 1.a Arrays .
 public class MajorityElements {
-    public int majorityElement(int[] nums) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-        for(int i=0 ; i < nums.length; i++){
-        map.put(nums[i], map.getOrDefault(nums[i],0)+1);
-        if(map.get(nums[i])>nums.length/2)
-        {
-            return nums[i];
+    public static int majorityElement(int[]nums){
+        int element=0;
+        int count=0;
+        for(int i=0;i<nums.length;i++){
+            if(count==0){
+                element=nums[i];
+            }
+            if(element==nums[i]){
+                count++;
+            }else{
+                count--;
+            }
         }
-        }
-        return -1;
+        return element;
+    
     }
     public static void main(String[] args){
         int[] nums={2,2,1,1,1,2,2};
-        MajorityElements me = new MajorityElements();
-        System.out.println(me.majorityElement(nums));
+        System.out.println(MajorityElements.majorityElement(nums));
     }
    
 }
