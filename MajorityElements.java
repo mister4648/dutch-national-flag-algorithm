@@ -1,5 +1,5 @@
 import java.util.*;
-// part 1 Arrays .
+// part 1.a Arrays .
 public class MajorityElements {
     public int majorityElement(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
