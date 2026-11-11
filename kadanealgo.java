@@ -1,6 +1,6 @@
 public class kadanealgo{
     public static void main(String args[]){
-        int arr[]={ -2 , 1 , -3 , 4 , -1};
+        int arr[]={ 2,3,-2,4,-1 };
         int currsum=0;
         int maxsum= Integer.MIN_VALUE;
 
